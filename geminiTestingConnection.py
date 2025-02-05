@@ -3,7 +3,7 @@ import streamlit as st
 import getpass
 
 
-api_key = st.secrets["GEMINI_API"]
+api_key = st.secrets["GEMINI"]["GEMINI_API"]
 
 # Initialize the Gemini model
 model = genai.GenerativeModel("gemini-pro")
