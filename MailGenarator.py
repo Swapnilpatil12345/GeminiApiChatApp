@@ -2,8 +2,9 @@
 import google.generativeai as genai
 import streamlit as st
 import getpass
+import os
 
-api_key = st.secrets["GEMINI_API"]
+api_key = os.getenv("API_KEY")
 
 # Initialize the Gemini model
 model = genai.GenerativeModel("gemini-pro")
