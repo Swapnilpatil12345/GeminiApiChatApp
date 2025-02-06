@@ -1,9 +1,16 @@
 import google.generativeai as genai
 import streamlit as st
 import getpass
+import os
 
+# Access the API key from environment variables
+api_key = os.getenv("API_KEY")
 
-api_key = st.secrets["GEMINI"]["GEMINI_API"]
+if api_key:
+    print("API Key retrieved successfully!")
+    # Use the API key in your logic (e.g., making API requests)
+else:
+    print("API Key not found!")
 
 # Initialize the Gemini model
 model = genai.GenerativeModel("gemini-pro")
